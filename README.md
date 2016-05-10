@@ -9,6 +9,8 @@
 * Angularjs
 # Setup
 
+# Setup
+
 ```sh
 $ vagrant up
 $ vagrant ssh
