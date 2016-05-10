@@ -1,16 +1,21 @@
 # About
+
 > This is a sample project that I made using the following tools...
+
 * Nginx
 * Unicorn
 * Ruby on Rails
 * Vagrant
 * Angularjs
 # Setup
+
 ```sh
 $ vagrant up
 $ vagrant ssh
 ```
+
 > since I was unable to make bundle install work properly with provision, you'll need to do the following
+
 ```sh
 $ cd /vagrant
 $ rvm use default
@@ -20,19 +25,26 @@ $ sudo ln -s /vagrant/config/nginx.conf /etc/nginx/sites-enabled/pcc
 $ chmod +x config/unicorn_init.sh
 $ sudo ln -s /vagrant/config/unicorn_init.sh /etc/init.d/unicorn
 ```
+
 > let's start  nginx and unicorn
+
 ```sh
 $ sudo service nginx start
 $ sudo service unicorn start
 ```
+
 > let's run the rake tasks
+
 ```sh
 $ rake db:migrate
 $ rake setup:bootstrap
 $ rake demo:load_data
 ```
+
 # Api
+
 ### request for token
+
 ```sh
 # endpoint
 POST localhost:3000/token
@@ -50,6 +62,7 @@ POST localhost:3000/token
 ```
 
 ### save payload data
+
 ```sh
 # endpoint
 POST localhost:3000/save
@@ -120,5 +133,7 @@ POST localhost:3000/save
     }
 }
 ```
+
 # Additional Info
+
 > I was not able to get the vagrant provisions to work properly and I was also unable to create test cases for this sample project
