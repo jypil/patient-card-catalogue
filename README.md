@@ -7,7 +7,6 @@
 * Ruby on Rails
 * Vagrant
 * Angularjs
-# Setup
 
 # Setup
 
