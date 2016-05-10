@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h4>About</h4></div>
+  <div class="panel-body">
+    <p>Total Reports: {{report_count}} </p>
+    <p>SSN: {{patient.ssn}}</p>
+    <p>Date of Birth: <span ng-bind="patient.date_of_birth | date:'MMM d, yyyy'"></span></p>
+    <p>Gender: {{patient.gender}}</p>
+    <p>Date Created: <span ng-bind="patient.created_at | date:'MMM d, yyyy'"></span></p>
+    <p>Date Updated: <span ng-bind="patient.updated_at | date:'MMM d, yyyy'"></span></p>
+  </div>
+</div>

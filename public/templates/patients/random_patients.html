@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h4>Patients</h4></div>
+    <div class="panel-body">
+      <div class="list-group">
+        <span class="list-group-item" ng-hide="patients.length">No patients found.</span>
+        <a class="list-group-item" ng-show="patients.length" ng-repeat="patient in patients" ng-href="patient/{{patient.ssn}}">
+          <img src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s28" width="28px" height="28px">
+          <span>{{patient.name}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

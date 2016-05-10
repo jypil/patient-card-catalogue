@@ -1,0 +1,36 @@
+<div class="well" ng-hide="reports.length">
+  <h4>No reports found.</h4>
+</div>
+
+<div class="panel panel-default" ng-show="reports.length" ng-repeat="report in reports track by $index">
+  <div class="panel-heading">
+    <h4>
+      <a ng-href="patient/{{report.ssn}}">
+        <img src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s56" width="56px" height="56px">
+        <span>{{report.patient.name}}</span>
+      </a>
+    </h4>
+  </div>
+  <div class="panel-body">
+    <div class="report_data">
+      Test: <span>{{report.name}}</span> <br>
+      Date: <span>{{report.date}}</span> <br>
+      Location: <span>{{report.location}}</span> <br>
+      Physician: <span>{{report.physician}}</span> <br>
+      Data:
+      <div ng-repeat="(data, data_value) in report.data track by $index">
+        {{data}}: <span ng-class="rate(data_value)">{{rate(data_value)}}</span>
+        <div ng-repeat="(result, result_value) in data_value track by $index">
+          {{result}}: <span>{{result_value}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="like-container">
+      <a href="#">Like</a>
+      <a href="#">Comment</a>
+      <a href="#">Share</a>
+    </div>
+  </div>
+</div>

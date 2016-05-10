@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="patient-card-catalogue">
+
+<head>
+  <title>PatientCardCatalogue</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <base href="/">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="wrapper">
+      <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+          <!-- main right col -->
+          <div class="column col-sm-12 col-xs-11" id="main">
+
+            <!-- top nav -->
+            <div class="navbar navbar-blue navbar-static-top">
+              <ng-include src="'/templates/defaults/navbar.html'"></ng-include>
+            </div>
+
+            <!-- /top nav -->
+            <div class="padding">
+              <div class="full col-sm-8 center-block" ng-view>
+                <%= yield %>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
