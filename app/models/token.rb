@@ -16,7 +16,6 @@ class Token < ActiveRecord::Base
     else
       false
     end
-    true
   end
 
   def self.generate(length=12)
